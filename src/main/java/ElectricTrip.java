@@ -42,7 +42,7 @@ public class ElectricTrip {
     }
 
     public void go(int participantId) {
-        calculDistanceAndCharge(participantId , "LowSpeed");
+        calculateDistanceAndCharge(participantId , "LowSpeed");
     }
 
     public String locationOf(int participantId) {
@@ -57,7 +57,7 @@ public class ElectricTrip {
     }
 
     public void sprint(int participantId) {
-        calculDistanceAndCharge(participantId , "HighSpeed");
+        calculateDistanceAndCharge(participantId , "HighSpeed");
     }
 
     public void charge(int participantId, int hoursOfCharge) {
@@ -70,7 +70,7 @@ public class ElectricTrip {
         }
     }
 
-    public void calculDistanceAndCharge(int participantId , String type){
+    public void calculateDistanceAndCharge(int participantId , String type){
 
         currentParticipant = participants.get(participantId);
         startCityIndex     = tripParts.indexOf(new TripPart(currentParticipant.getStartCity() , 0));
